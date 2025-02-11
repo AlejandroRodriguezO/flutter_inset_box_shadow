@@ -119,9 +119,8 @@ class BoxShadow extends painting.BoxShadow {
         other.inset == inset;
   }
 
-  @override
-  int get hashCode =>
-      hashValues(color, offset, blurRadius, spreadRadius, blurStyle, inset);
+@override
+int get hashCode => Object.hash(color, blurRadius, spreadRadius, offset, inset);
 
   @override
   String toString() =>
